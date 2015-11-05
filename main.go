@@ -8,20 +8,27 @@ import (
 	"github.com/rrawrriw/go-venv-lib"
 )
 
+const (
+	GOPATH = "GOPATH"
+)
+
 func main() {
 	curr, err := os.Getwd()
 	handleError(err)
 
+	oldBin := path.Join(os.Getenv(GOPATH), "bin")
+
 	src, err := venv.FindSrcDir(curr)
 	handleError(err)
 
-	bin := path.Join(src, "bin")
-	err = venv.AppendEnvList("PATH", bin)
-	handleError(err)
+	newBin := path.Join(src, "bin")
+	pathEnv := os.Getenv("PATH")
+	newPath := venv.NewPath(pathEnv, oldBin, newBin)
 
 	fmt.Printf("export GOPATH=%v;\n", src)
-	fmt.Printf("export PATH=%v;", os.Getenv("PATH"))
+	fmt.Printf("export PATH=%v;\n", newPath)
 
+	os.Exit(0)
 }
 
 func handleError(err error) {

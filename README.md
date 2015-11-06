@@ -10,6 +10,7 @@ go get github.com/rrawrriw/go-drawer-cmd
 
 go install github.com/rrawrriw/go-drawer-cmd
 
+# Kopiere go-drawer-cmd executable in ein Verzeichnis das in PATH gelistet ist
 cp GOPATH/bin/go-drawer-cmd ~/bin/go-drawer # maybe
 ```
 

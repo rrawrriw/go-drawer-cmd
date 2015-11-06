@@ -11,7 +11,7 @@ go get github.com/rrawrriw/go-drawer-cmd
 go install github.com/rrawrriw/go-drawer-cmd
 
 # Kopiere go-drawer-cmd executable in ein Verzeichnis das in PATH gelistet ist
-cp GOPATH/bin/go-drawer-cmd ~/bin/go-drawer # maybe
+cp ${GOPATH}/bin/go-drawer-cmd ~/bin/go-drawer # maybe
 ```
 
 Einführung
@@ -33,7 +33,7 @@ Jetzt gehts es weiter wie immer
 ```bash
 go get github.com/monk/ohmmmm
 ```
-*... Programmiere unglaubliches Zeug  tip tip tip...*
+*... programmiere unglaubliches Zeug  tip tip tip...*
 
 ```bash
 go test
@@ -51,7 +51,7 @@ Setzte standard Pfad in der .bashrc
 
 ```bash
 export GOPATH=/to/path
-export PATH=$PATH:${GOPATH}/bin
+export PATH=${PATH}:${GOPATH}/bin
 ```
 
 Um das ganze noch einfacher zu machen, geht das überhaupt nocht, ja! Füge ich noch diese 3 Simplen Zeilen zu meiner .bashrc hinzu.

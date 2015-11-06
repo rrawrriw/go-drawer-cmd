@@ -5,7 +5,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/rrawrriw/go-venv-lib"
+	"github.com/rrawrriw/go-drawer-lib"
 )
 
 const (
@@ -18,12 +18,12 @@ func main() {
 
 	oldBin := path.Join(os.Getenv(GOPATH), "bin")
 
-	src, err := venv.FindSrcDir(curr)
+	src, err := drawer.FindSrcDir(curr)
 	handleError(err)
 
 	newBin := path.Join(src, "bin")
 	pathEnv := os.Getenv("PATH")
-	newPath := venv.NewPath(pathEnv, oldBin, newBin)
+	newPath := drawer.NewPath(pathEnv, oldBin, newBin)
 
 	fmt.Printf("export GOPATH=%v;\n", src)
 	fmt.Printf("export PATH=%v;\n", newPath)

@@ -16,7 +16,7 @@ cp GOPATH/bin/go-drawer-cmd ~/bin/go-drawer # maybe
 Einführung
 ----------
 
-Wenn auch du gerne Dinge in Schubladen steckst dann bist du hier richtig. Schublade auf, Go Projekt rein. Damit es nicht zu einem Kutelmuttel kommt zwischen allen den vielen Versionen für alle die fantastische Go Libraries. Kannst du jetzt jedes Go Projekt in einer gesondert Verzeichnis Struktur Verwalten so wie du es bist jetzt auch machst. Mit einem kleinen Unterschied.
+Wenn auch du gerne Dinge in Schubladen steckst dann bist du hier richtig. Schublade auf, Go Projekt rein. Damit es nicht zu einem Kutelmuttel kommt zwischen allen den vielen Versionen für alle die fantastische Go Libraries. Kannst du jetzt jedes Go Projekt in einer gesondert Verzeichnis Struktur Verwalten so wie du es bist jetzt auch, mehr oder weniger, getan hast. Mit einem kleinen Unterschied.
 
 ```bash
 mkdir -p shaloin/src/github.com/monk/shaloin-lib # crazy Projekt
@@ -27,20 +27,16 @@ Jetzt kommt der kleine Unterschied
 ```bash
 eval $(go-drawer)
 ```
-
 Jetzt gehts es weiter wie immer
 
 ```bash
 go get github.com/monk/ohmmmm
 ```
-... Programmiere unglaubliches Zeug ...
-
-*tip* *tip* *tip*
+*... Programmiere unglaubliches Zeug  tip tip tip...*
 
 ```bash
 go test
 ```
-
 was man halt so den ganzen Tag macht.
 
 Was macht dieser kleine Unterschied nun? Er geht von dem aktuellen Verzichnis rückwärts die Verzeichnisstruktur nach oben findet er ein Verzeichnis mit einem src Verzeichnis darin wird GOPATH gesetzt sowie PATH um GOPATH/bin erweitert.
@@ -67,4 +63,4 @@ function god() {
 
 Zack, fertig!
 
-Die Idee kommt von dem [https://virtualenvwrapper.readthedocs.org/](virtualenvwrapper) Projekt aus der Python Welt.
+Die Idee kommt von dem [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/) Projekt aus der Python Welt.

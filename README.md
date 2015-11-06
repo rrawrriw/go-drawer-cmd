@@ -1,23 +1,39 @@
 Schubladendenken
 ================
 
-Wenn auch du gerne Dinge in Schubladen steckst dann bist du hier richtig. Schublade auf, Go Projekt rein.
+Install
+-------
 
-Damit es nicht zu einem Kutelmuttel kommt zwischen allen den vielen Versionen für alle die fantastische Go Libraries.
+```bash
+go get github.com/rrawrriw/go-drawer-lib
+go get github.com/rrawrriw/go-drawer-cmd
 
-Kannst du jetzt jedes Go Projekt in ein Verzeichnis packen ein src Verzeichnis erstellen, genau wie du es jetzt bist auch schon gemacht hast.
+go install github.com/rrawrriw/go-drawer-cmd
 
+cp GOPATH/bin/go-drawer-cmd ~/bin/go-drawer # maybe
+```
+
+Einführung
+----------
+
+Wenn auch du gerne Dinge in Schubladen steckst dann bist du hier richtig. Schublade auf, Go Projekt rein. Damit es nicht zu einem Kutelmuttel kommt zwischen allen den vielen Versionen für alle die fantastische Go Libraries. Kannst du jetzt jedes Go Projekt in einer gesondert Verzeichnis Struktur Verwalten so wie du es bist jetzt auch machst. Mit einem kleinen Unterschied.
+
+```bash
+mkdir -p shaloin/src/github.com/monk/shaloin-lib # crazy Projekt
+cd !$
+```
 Jetzt kommt der kleine Unterschied
 
 ```bash
-eval $(go-venv)
+eval $(go-drawer)
 ```
 
-Jetzt gehts es weiter wie immer wie du es bist auch immer gemacht hast 
+Jetzt gehts es weiter wie immer
 
 ```bash
-go get github.com/ninja/awesome
+go get github.com/monk/ohmmmm
 ```
+... Programmiere unglaubliches Zeug ...
 
 *tip* *tip* *tip*
 
@@ -45,7 +61,7 @@ Um das ganze noch einfacher zu machen, geht das überhaupt nocht, ja! Füge ich 
 
 ```bash
 function god() {
-  eval $(go-venv);
+  eval $(go-drawer);
 }
 ```
 

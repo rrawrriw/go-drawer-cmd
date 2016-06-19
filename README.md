@@ -5,10 +5,10 @@ Install
 -------
 
 ```bash
-go get github.com/rrawrriw/go-drawer-lib
-go get github.com/rrawrriw/go-drawer-cmd
+go get github.com/tochti/go-drawer-lib
+go get github.com/tochti/go-drawer-cmd
 
-go install github.com/rrawrriw/go-drawer-cmd
+go install github.com/tochti/go-drawer-cmd
 
 # Kopiere go-drawer-cmd executable in ein Verzeichnis das in PATH gelistet ist
 cp ${GOPATH}/bin/go-drawer-cmd ~/bin/go-drawer # maybe

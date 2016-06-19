@@ -5,7 +5,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/rrawrriw/go-drawer-lib"
+	"github.com/tochti/go-drawer-lib"
 )
 
 const (
